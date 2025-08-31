@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to GDG On Campus Amity University Noida</title>
+    <style>
+        body {
+            font-family: 'Google Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 0;
+            border-radius: 8px 8px 0 0;
+            text-align: center;
+            margin: -40px -40px 40px -40px;
+            overflow: hidden;
+        }
+        .header-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px 8px 0 0;
+        }
+        .welcome-title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .gdg-logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .campus-subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+        .celebration-emoji {
+            font-size: 36px;
+            margin: 15px;
+        }
+        .greeting {
+            font-size: 22px;
+            margin-bottom: 25px;
+            color: #1a73e8;
+            font-weight: 600;
+            text-align: center;
+        }
+        .welcome-message {
+            background: linear-gradient(135deg, #e3f2fd, #f3e5f5);
+            border-radius: 15px;
+            padding: 35px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        .welcome-message h2 {
+            color: #1a73e8;
+            margin-bottom: 15px;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 35px 0;
+        }
+        .feature-card {
+            background-color: #f8f9fa;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            border-left: 4px solid #4285f4;
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+        .feature-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #1a73e8;
+            margin-bottom: 10px;
+        }
+        .feature-description {
+            font-size: 14px;
+            color: #5f6368;
+        }
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 35px;
+            margin: 35px 0;
+            text-align: center;
+        }
+        .cta-section h3 {
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: white;
+            color: #667eea;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            margin: 10px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #f0f0f0;
+            transform: translateY(-2px);
+        }
+        .community-benefits {
+            background-color: #e8f5e8;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        .community-benefits h3 {
+            color: #137333;
+            margin-bottom: 15px;
+        }
+        .benefit-item {
+            margin: 12px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        .benefit-item::before {
+            content: '✅';
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .next-steps {
+            background-color: #fff3e0;
+            border: 2px solid #f9ab00;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        .next-steps h3 {
+            color: #e8710a;
+            margin-bottom: 15px;
+        }
+        .step {
+            margin: 15px 0;
+            padding: 10px;
+            background-color: white;
+            border-radius: 8px;
+            border-left: 3px solid #f9ab00;
+        }
+        .organizer-section {
+            background-color: #f8f9fa;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        .organizer-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #4285f4, #34a853);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 32px;
+            margin: 0 auto 15px auto;
+        }
+        .organizer-name {
+            font-size: 20px;
+            font-weight: bold;
+            color: #1a73e8;
+            margin-bottom: 5px;
+        }
+        .organizer-title {
+            color: #5f6368;
+            font-size: 16px;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e8eaed;
+            text-align: center;
+            font-size: 14px;
+            color: #5f6368;
+        }
+        .social-links {
+            margin: 20px 0;
+        }
+        .social-links a {
+            color: #4285f4;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+        }
+        .footer-logo {
+            max-width: 150px;
+            height: auto;
+            margin: 20px 0;
+        }
+        .footer-link {
+            color: #4285f4;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .footer-link:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            .header {
+                margin: -20px -20px 30px -20px;
+                padding: 30px 15px;
+            }
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+            .community-stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="img/email-header.jpg" alt="GDG On Campus Amity University Noida" class="header-image">
+        </div>
+
+        <div class="greeting">
+            Hey {{member_name}}!
+        </div>
+
+        <div class="welcome-message">
+            <h2>Welcome to the Community! 🎊</h2>
+            <p>We're absolutely thrilled to have you join our Google Developer Groups community at Amity University Noida. You're now part of an amazing network of passionate developers, creators, and innovators!</p>
+        </div>
+
+        <div class="community-benefits">
+            <h3>🌟 What you get as a GDG member:</h3>
+            <div class="benefit-item">Access to exclusive workshops and tech talks</div>
+            <div class="benefit-item">Networking opportunities with industry professionals</div>
+            <div class="benefit-item">Hands-on experience with Google technologies</div>
+            <div class="benefit-item">Mentorship from experienced developers</div>
+            <div class="benefit-item">Collaboration on real-world projects</div>
+            <div class="benefit-item">Career guidance and skill development</div>
+        </div>
+
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🎓</div>
+                <div class="feature-title">Learn & Grow</div>
+                <div class="feature-description">Attend workshops, talks, and hands-on sessions on cutting-edge technologies</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🤝</div>
+                <div class="feature-title">Network</div>
+                <div class="feature-description">Connect with like-minded developers and build lasting professional relationships</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🚀</div>
+                <div class="feature-title">Build Projects</div>
+                <div class="feature-description">Work on exciting projects and participate in hackathons and coding challenges</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎤</div>
+                <div class="feature-title">Share Knowledge</div>
+                <div class="feature-description">Present your work and share your expertise with the community</div>
+            </div>
+        </div>
+
+        <div class="next-steps">
+            <h3>🚀 Next Steps</h3>
+            <div class="step">
+                <strong>1.</strong> Join our WhatsApp group to stay updated
+            </div>
+            <div class="step">
+                <strong>2.</strong> Follow us on social media for announcements
+            </div>
+            <div class="step">
+                <strong>3.</strong> Attend our upcoming events and meetups
+            </div>
+            <div class="step">
+                <strong>4.</strong> Introduce yourself to the community
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h3>Connect with Us</h3>
+            <p>Join our community platforms and never miss an update:</p>
+            <a href="{{whatsapp_group_url}}" class="cta-button whatsapp">WhatsApp Group</a>
+            <a href="{{discord_url}}" class="cta-button">Discord Server</a>
+            <a href="{{linkedin_url}}" class="cta-button">LinkedIn Page</a>
+        </div>
+
+        <p>We can't wait to see what amazing things we'll build together. Welcome to the family! 🎉</p>
+
+        <div class="organizer-section">
+            <div class="organizer-avatar">RR</div>
+            <div class="organizer-name">Rajat Rajput</div>
+            <div class="organizer-title">Organizer, GDG On Campus Amity University Noida</div>
+        </div>
+
+        <div class="footer">
+            <div class="gdg-footer-logo">
+                <img src="img/logo.png" alt="Google Developer Groups" class="footer-logo">
+            </div>
+            
+            <div class="footer-text">
+                GDG On Campus Amity University, Noida
+            </div>
+            
+            <p>
+                Visit us at: <a href="https://gdgamity.tech" class="footer-link">gdgamity.tech</a>
+            </p>
+            
+            <p style="margin-top: 15px; font-size: 12px;">
+                You're receiving this email as a new member of GDG On Campus Amity University Noida.
+                <a href="{{unsubscribe_url}}" style="color: #5f6368;">Unsubscribe</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
