@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Received - GDG On Campus Amity University Noida</title>
+    <style>
+        body {
+            font-family: 'Google Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 30px;
+            border-radius: 8px 8px 0 0;
+            text-align: center;
+            margin: -40px -40px 30px -40px;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .gdg-logo {
+            color: #4285f4;
+        }
+        .campus-text {
+            color: #34a853;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        .people-icons {
+            font-size: 24px;
+            margin-left: 10px;
+            color: #34a853;
+        }
+        .greeting {
+            font-size: 18px;
+            margin-bottom: 25px;
+            color: #1a73e8;
+            font-weight: 500;
+        }
+        .thank-you-section {
+            background: linear-gradient(135deg, #e8f0fe, #f3e5f5);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+            text-align: center;
+        }
+        .checkmark {
+            font-size: 48px;
+            color: #34a853;
+            margin-bottom: 15px;
+        }
+        .status-box {
+            background-color: #e8f0fe;
+            border-left: 4px solid #4285f4;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 4px;
+        }
+        .whatsapp-section {
+            background-color: #f0f8f0;
+            border: 2px solid #25d366;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+            text-align: center;
+        }
+        .whatsapp-icon {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #25d366;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            margin: 15px 0;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #1faa52;
+            transform: translateY(-2px);
+        }
+        .organizer-info {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        .organizer-name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #1a73e8;
+            margin-bottom: 5px;
+        }
+        .organizer-title {
+            color: #5f6368;
+            font-size: 14px;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e8eaed;
+            text-align: center;
+            font-size: 14px;
+            color: #5f6368;
+        }
+        .gdg-footer-logo {
+            color: #4285f4;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .footer-link {
+            color: #4285f4;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .footer-link:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            .header {
+                margin: -20px -20px 20px -20px;
+                padding: 25px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <span class="gdg-logo">GDG On Campus</span>
+                <span class="people-icons">👥👥👥</span>
+            </div>
+            <div class="campus-text">Amity University Noida</div>
+        </div>
+
+        <div class="greeting">
+            Hey {{applicant_name}},
+        </div>
+
+        <div class="thank-you-section">
+            <div class="checkmark">✅</div>
+            <h2>Thank you for applying!</h2>
+            <p>We've received your application and our team is reviewing it carefully.</p>
+        </div>
+
+        <div class="status-box">
+            <h3>What happens next?</h3>
+            <p>🔍 Our team will review your application</p>
+            <p>📧 Results will be communicated via email</p>
+            <p>⏱️ We'll get back to you within {{review_timeframe}} days</p>
+        </div>
+
+        <div class="whatsapp-section">
+            <div class="whatsapp-icon">💬</div>
+            <h3>Join our WhatsApp Group</h3>
+            <p>While you wait, connect with our community and stay updated with the latest announcements, events, and discussions!</p>
+            <a href="{{whatsapp_group_url}}" class="cta-button">Join WhatsApp Group</a>
+        </div>
+
+        <p>We appreciate your interest in joining our community and look forward to potentially having you as part of our team!</p>
+
+        <div class="organizer-info">
+            <div class="organizer-name">Rajat Rajput</div>
+            <div class="organizer-title">Organizer, GDG On Campus Amity University Noida</div>
+        </div>
+
+        <div class="footer">
+            <div class="gdg-footer-logo">
+                Google Developer Groups
+            </div>
+            <p>
+                Visit us at: <a href="https://gdgamity.tech" class="footer-link">gdgamity.tech</a>
+            </p>
+            <p style="margin-top: 15px; font-size: 12px;">
+                You're receiving this email because you applied to join GDG On Campus Amity University Noida.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
